@@ -7,25 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Page</title>
   <link rel="stylesheet" type="text/css" href="../css/login.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 
 <body>
-  <h1 align="center" style="color: azure;">Decentralized Voting Using Ethereum Blockchain</h1>
+  <h1 align="center" style="color: azure;">ShadowCast Voter Login</h1>
   <div class="container mt-5">
     <h1>Login</h1>
     <form id="loginForm">
       <div class="form-group">
-        <label for="voter-id"><h3>Voter ID</h3></label>
+        <label for="voter-id">
+          <h3>Voter ID</h3>
+        </label>
         <input type="text" class="form-control" id="voter-id" name="voter-id" placeholder="Voter id">
       </div>
       <div class="form-group">
-        <label for="password"><h3>Password</h3></label>
+        <label for="password">
+          <h3>Password</h3>
+        </label>
         <input type="password" class="form-control" id="password" name="password" placeholder="Password">
       </div>
-      <button type="submit" class="btn btn-primary"><b>Login</b></button>
+      <button type="submit" class="btn btn-primary" id="tt"><b>Login</b></button>
     </form>
   </div>
+  <div id="particles-js"></div> <!-- Container for the smoke effect -->
+  <script src="../js/particle-config.js"></script> <!-- Your configuration script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="../js/login.js" type="module"></script>
