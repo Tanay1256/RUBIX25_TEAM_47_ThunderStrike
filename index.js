@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const app = express();
+const PORT = 3000;
 
 
 // Authorization middleware
@@ -74,6 +75,12 @@ app.get('/dist/app.bundle.js', (req, res) => {
 // Serve the favicon.ico file
 app.get('/favicon.ico', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/favicon.ico'));
+});
+app.use(express.static(path.join(__dirname, 'src')));
+
+// Handle other routes (optional)
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src', 'index.html'));
 });
 
 // Start the server
